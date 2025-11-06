@@ -1,0 +1,91 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.py.class
+*.egg
+*.egg-info/
+.eggs/
+MANIFEST
+build/
+dist/
+
+# ==========================
+# Virtual environments
+# ==========================
+.venv/
+venv/
+env/
+ENV/
+*.env
+*.venv
+
+# ==========================
+# Streamlit and local data
+# ==========================
+.streamlit/
+# Local vector DB
+chroma_store/
+data/*.sqlite3
+/data/chroma_store/
+chroma.sqlite3
+/tmp/
+
+# ==========================
+# Secrets and environment files
+# ==========================
+.env
+.env.*
+secrets.toml
+streamlit/secrets.toml
+config.json
+credentials.json
+
+# ==========================
+# IDE / Editor files
+# ==========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ==========================
+# OS files
+# ==========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ==========================
+# Notebooks / Exports
+# ==========================
+*.ipynb_checkpoints
+*.csv~
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# ==========================
+# Generated data
+# ==========================
+*.db
+*.sqlite
+*.pickle
+*.pkl
+*.npy
+*.npz
+*.log
+*.pdf
+*.docx
+*.xlsx

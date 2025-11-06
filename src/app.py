@@ -13,7 +13,12 @@ st.caption("CSV → Chroma → OpenAI. Answers only within support scope.")
 
 with st.sidebar:
     st.header("Settings")
-    api_key = st.text_input("OpenAI API Key", type="password", value=os.getenv("OPENAI_API_KEY",""))
+    
+    api_key = os.getenv("OPENAI_API_KEY", "") or st.secrets.get("OPENAI_API_KEY", "")
+
+    if not api_key:
+        st.error("Missing OpenAI API key. Please set OPENAI_API_KEY in Streamlit Secrets.", icon="🔐")
+        
     n_results = st.slider("Top-K documents", 1, 10, TOP_K)
     threshold = st.slider("Similarity threshold", 0.20, 0.95, SIMILARITY_THRESHOLD, step=0.01)
     persist_dir = st.text_input("Chroma folder", value=CHROMA_DIR)
